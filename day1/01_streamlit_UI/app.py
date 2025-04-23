@@ -20,7 +20,7 @@ st.markdown("### コメントを解除しながらStreamlitの機能を学びま
 st.markdown("このデモコードでは、コメントアウトされた部分を順番に解除しながらUIの変化を確認できます。")
 
 # ============================================
-# サイドバー 
+# サイドバー
 # ============================================
 st.sidebar.header("デモのガイド")
 st.sidebar.info("コードのコメントを解除して、Streamlitのさまざまな機能を確認しましょう。")
@@ -36,56 +36,56 @@ name = st.text_input("あなたの名前", "ゲスト")
 st.write(f"こんにちは、{name}さん！")
 
 # ボタン
-# st.subheader("ボタン")
-# if st.button("クリックしてください"):
-#     st.success("ボタンがクリックされました！")
+st.subheader("ボタン")
+if st.button("クリックしてください"):
+    st.success("ボタンがクリックされました！")
 
 # チェックボックス
-# st.subheader("チェックボックス")
-# if st.checkbox("チェックを入れると追加コンテンツが表示されます"):
-#     st.info("これは隠れたコンテンツです！")
+st.subheader("チェックボックス")
+if st.checkbox("チェックを入れると追加コンテンツが表示されます"):
+    st.info("これが新しく表示されたコンテンツです！")
 
 # スライダー
-# st.subheader("スライダー")
-# age = st.slider("年齢", 0, 100, 25)
-# st.write(f"あなたの年齢: {age}")
+st.subheader("スライダー")
+age = st.slider("年齢", 0, 120, 25)
+st.write(f"あなたの年齢: {age}")
 
 # セレクトボックス
-# st.subheader("セレクトボックス")
-# option = st.selectbox(
-#     "好きなプログラミング言語は?",
-#     ["Python", "JavaScript", "Java", "C++", "Go", "Rust"]
-# )
-# st.write(f"あなたは{option}を選びました")
+st.subheader("セレクトボックス")
+option = st.selectbox(
+    "好きなプログラミング言語は?",
+    ["Python", "JavaScript", "Java", "C++", "Go", "Rust", "COBOL"]
+)
+st.write(f"あなたは{option}を選びました")
 
 # ============================================
 # レイアウト
 # ============================================
-# st.header("レイアウト")
+st.header("レイアウト")
 
 # カラム
-# st.subheader("カラムレイアウト")
-# col1, col2 = st.columns(2)
-# with col1:
-#     st.write("これは左カラムです")
-#     st.number_input("数値を入力", value=10)
-# with col2:
-#     st.write("これは右カラムです")
-#     st.metric("メトリクス", "42", "2%")
+st.subheader("カラムレイアウト")
+col1, col2 = st.columns(2)
+with col1:
+    st.write("これは左カラムです")
+    st.number_input("数値を入力", value=10)
+with col2:
+    st.write("これは右カラムです")
+    st.metric("メトリクス", "42", "2%")
 
 # タブ
-# st.subheader("タブ")
-# tab1, tab2 = st.tabs(["第1タブ", "第2タブ"])
-# with tab1:
-#     st.write("これは第1タブの内容です")
-# with tab2:
-#     st.write("これは第2タブの内容です")
+st.subheader("タブ")
+tab1, tab2 = st.tabs(["第1タブ", "第2タブ"])
+with tab1:
+    st.write("これは第1タブの内容です")
+with tab2:
+    st.write("これは第2タブの内容です")
 
 # エクスパンダー
-# st.subheader("エクスパンダー")
-# with st.expander("詳細を表示"):
-#     st.write("これはエクスパンダー内の隠れたコンテンツです")
-#     st.code("print('Hello, Streamlit！')")
+st.subheader("エクスパンダー")
+with st.expander("詳細を表示"):
+    st.write("これはエクスパンダー内の隠れたコンテンツです")
+    st.code("print('Hello, Streamlit！')")
 
 # ============================================
 # データ表示
@@ -155,7 +155,7 @@ st.write(f"こんにちは、{name}さん！")
 #     # ファイルのデータを表示
 #     bytes_data = uploaded_file.getvalue()
 #     st.write(f"ファイルサイズ: {len(bytes_data)} bytes")
-#     
+#
 #     # CSVの場合はデータフレームとして読み込む
 #     if uploaded_file.name.endswith('.csv'):
 #         df = pd.read_csv(uploaded_file)
@@ -177,7 +177,7 @@ st.write(f"こんにちは、{name}さん！")
 # }
 # </style>
 # """, unsafe_allow_html=True)
-# 
+#
 # st.markdown('<p class="big-font">これはカスタムCSSでスタイリングされたテキストです！</p>', unsafe_allow_html=True)
 
 # ============================================
